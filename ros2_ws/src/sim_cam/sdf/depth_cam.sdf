@@ -1,0 +1,45 @@
+<?xml version="1.6" ?>
+<sdf version="1.9">
+  <model name="sim_rgbd_camera">
+    <!-- <pose>0 0 1.2 0 0 0</pose> -->
+    <!-- <pose>0 0 2  0  -1.5708  0</pose> -->
+    <pose>0 0 2 0 0 0</pose>   
+
+
+    <static>true</static>
+
+    <link name="camera_link">
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.001</ixx><iyy>0.001</iyy><izz>0.001</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+      <visual name="vis">
+        <geometry><box><size>0.05 0.05 0.05</size></box></geometry>
+      </visual>
+
+      
+      <sensor name="rgbd" type="rgbd_camera">
+        <always_on>true</always_on>
+        <update_rate>30</update_rate>
+        
+        <topic>/sim/camera</topic>
+        <camera>
+          <horizontal_fov>1.047</horizontal_fov> <!-- ~60° -->
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>5.0</far>
+          </clip>
+        </camera>
+      </sensor>
+    </link>
+  </model>
+</sdf>
