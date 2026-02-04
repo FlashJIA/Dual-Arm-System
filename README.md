@@ -1,4 +1,4 @@
-#### This branch is optimized by *Junyan Zhou* to facilitate easy reproduction of our group's codes. Note that *Shucheng Jia* made great contributions to the original codes.
+
 
 ### First, in 'filemanager' click File System - /home . Under this path, run:
 ```git clone -b Ryan https://gitlab.oit.duke.edu/jz532/roboticsfinalproject.git```
